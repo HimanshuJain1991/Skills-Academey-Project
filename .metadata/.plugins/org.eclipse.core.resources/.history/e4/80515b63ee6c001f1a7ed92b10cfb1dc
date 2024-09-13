@@ -1,0 +1,19 @@
+package com.rays.common.attachment;
+
+import com.rays.common.BaseDTO;
+
+public class AttachmentDTO extends BaseDTO {
+
+	private String name = null;
+	private String description = null;
+	private String type = null;
+	private byte[] doc;
+	private Long userId = null;
+
+	@Override
+	public String getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

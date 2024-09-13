@@ -1,0 +1,63 @@
+package com.rays.common;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
+
+	@Autowired
+	public EntityManager entityManager;
+
+	public abstract Class<T> getDTOClass();
+	public  void populate(T dto) {
+		
+	}
+
+	@Override
+	public long add(T dto) {
+		entityManager.persist(dto);
+		return dto.getId();
+	}
+
+	@Override
+	public void update(T dto) {
+		entityManager.merge(dto);
+
+	}
+
+	@Override
+	public void delete(T dto) {
+		// TODO Auto-generated method stub
+		entityManager.remove(dto);
+
+	}
+
+	@Override
+	public T findByPk(long pk) {
+		T dto = entityManager.find(getDTOClass(), pk);
+		return dto;
+	}
+
+	@Override
+	public List search(T dto, int pageNo, int pageize) {
+		CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+		CriteriaQuery<T> cq = builder.createQuery(getDTOClass());
+		Root<T> qRoot = cq.from(getDTOClass());
+		TypedQuery<T> query = entityManager.createQuery(cq);
+		if (pageNo > 0) {
+			query.setFirstResult(pageize * pageNo);
+			query.setMaxResults(pageize);
+		}
+		List list = query.getResultList();
+
+		return list;
+	}
+
+}

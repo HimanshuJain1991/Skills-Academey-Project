@@ -1,0 +1,13 @@
+package com.rays.common.attachment;
+
+import com.rays.common.BaseDAOImpl;
+
+public class AttachmentDAOImpl extends BaseDAOImpl<AttachmentDTO> implements AttachmentDAOInt {
+
+	@Override
+	public Class<AttachmentDTO> getDTOClass() {
+		// TODO Auto-generated method stub
+		return AttachmentDTO.class;
+	}
+
+}

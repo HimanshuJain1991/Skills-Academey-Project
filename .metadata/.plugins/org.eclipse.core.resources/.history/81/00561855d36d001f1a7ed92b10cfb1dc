@@ -1,0 +1,11 @@
+package com.rays.common;
+
+public class Check {
+	
+	public static void main(String[] args) {
+		Check c=new Check();
+		System.out.println(c instanceof Check);
+	}
+	
+
+}

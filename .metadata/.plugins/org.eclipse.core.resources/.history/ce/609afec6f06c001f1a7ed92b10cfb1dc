@@ -1,0 +1,28 @@
+package com.rays.common.attachment;
+
+import javax.persistence.Column;
+import javax.persistence.Lob;
+
+import com.rays.common.BaseDTO;
+
+public class AttachmentDTO extends BaseDTO {
+
+	@Column(name = "NAME", length = 20)
+	private String name = null;
+	@Column(name = "DESCRIPTION", length = 20)
+	private String description = null;
+	@Column(name = "TYPE", length = 20)
+	private String type = null;
+	@Column(name = "USERID")
+	private Long userId = null;
+	@Lob
+	@Column(name = "DOC")
+	private byte[] doc;
+
+	@Override
+	public String getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

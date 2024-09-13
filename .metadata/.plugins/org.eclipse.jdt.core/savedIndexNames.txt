@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\RaysSoftware\Projects Workspace\Skills Academey Project\.metadata\.plugins\org.eclipse.jdt.core
+1024446143.index
+2288518988.index

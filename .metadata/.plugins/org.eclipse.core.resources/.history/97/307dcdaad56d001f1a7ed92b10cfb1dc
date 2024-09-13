@@ -1,0 +1,20 @@
+package com.rays.common;
+
+public class Check {
+
+	public static void main(String[] args) {
+		Check c = new Check();
+		System.out.println(c instanceof Check);
+		int i = 100;
+		int j = i++;
+		System.out.println("value of i=" + i);// 101
+		System.out.println("value of j=" + j);// 100
+		System.out.println("---------In case of preincrement--------");
+		int k = 200;
+		int l = ++k;
+		System.out.println("value of k=" + k);
+		System.out.println("value of l=" + l);
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.rays.common;
+
+public class Check {
+
+	public static void main(String[] args) {
+		Check c = new Check();
+		System.out.println(c instanceof Check);
+		int i = 100;
+		int j = i++;
+		System.out.println("value of i" + i);
+		System.out.println("value of j" + j);
+	}
+
+}

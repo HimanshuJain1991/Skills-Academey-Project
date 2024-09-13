@@ -1,0 +1,8 @@
+package com.rays.common.attachment;
+
+import com.rays.common.BaseServiceImpl;
+
+public class AttachmentServiceImpl extends BaseServiceImpl<AttachmentDTO, AttachmentDAOInt>
+		implements AttachmentServiceInt {
+
+}

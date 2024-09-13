@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\RaysSoftware\Projects Workspace\Skills Academey Project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1403570784.index
+\Hello\src\main\java
+C:\RaysSoftware\Projects Workspace\Skills Academey Project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4114514053.index
+\Project\src\main\resources
